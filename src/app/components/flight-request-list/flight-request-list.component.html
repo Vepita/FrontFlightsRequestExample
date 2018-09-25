@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="alert alert-success" role="alert" *ngIf="showInfoMessage">
+    {{infoMessage}}
+  </div>
+  <div role="tabpanel" class="tab-pane">
+    <br/>
+
+    <div clas="col-12 col-sm-12 col-lg-12 table-responsive">
+      <table id="tablaProductos" class="table table-hover table-striped t-notifica tab-respon table-content-centered">
+        <thead>
+          <tr>
+            <th>
+              Applicant Name
+            </th>
+            <th>
+              Travel Date
+            </th>
+            <th>
+              Destination
+            </th>
+            <th>
+              Status
+            </th>
+            <th>
+              Actions
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let flightRquest of flightsRequests">
+            <td>{{flightRquest?.applicantName}}</td>
+            <td>{{flightRquest?.travelDate}}</td>
+            <td>{{flightRquest?.destination.destination}}</td>
+            <td>{{flightRquest?.status}}</td>
+            <th>
+              <button (click)="onBook(flightRquest)">Book</button>
+            </th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    &nbsp;
+
+  </div>
