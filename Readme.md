@@ -5,8 +5,10 @@
 * Visual Studio Code
 
 ## Despliegue
-* cd al proyecto base
-* npm install 
-* ng build
-* ng serve
+Abrir la consola del sistema operativo y ejecutar los comandos:
+
+1. cd al proyecto base
+2. npm install 
+3. ng build
+4. ng serve
 
